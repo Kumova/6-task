@@ -19,12 +19,12 @@ class Student:
                  if course in lecturer.grades:
                     lecturer.grades[course] += sum(lecturer["grade"]) / len(lecturer["grade"])
                     counter += 1
-                    print(round(lecturer.grades[course]/ counter, 2))
+                    return round(lecturer.grades[course]/ counter, 2)
                  else:
                       lecturer.grades[course] = [grade]
             else:
                 return 'Ошибка'    
-
+        
 
 class Mentor:
     def __init__(self, name, surname):
@@ -34,6 +34,8 @@ class Mentor:
          
 
 class Lecturer(Mentor):
+    def __init__(self, name, surname):
+        super().__init__(name, surname)
     def __init__(self, course, grade):
         self.lecturer.grades[course] 
         
@@ -48,12 +50,16 @@ class Reviewer(Mentor):
                  if course in student.grades:
                     student.grades[course] += sum(student["grade"]) / len(student["grade"])
                     counter += 1
-                    print(round(student.grades[course]/ counter, 2))
+                    return round(student.grades[course]/ counter, 2)
                  else:
                     student.grades[course] = [grade]
             else:
                 return 'Ошибка'
+  
 
+Anna = Student('Anna', 'Ivanova', 'f')
+Ivan = Lecturer('phyton', 8)
+Sergey = Reviewer('Sergey', 'Ivanov')
 
 
 #best_student = Student('Ruoy', 'Eman', 'your_gender')
