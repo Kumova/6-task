@@ -54,11 +54,7 @@ class Reviewer(Mentor):
             else:
                 return 'Ошибка'
 
-Anna = Student('Anna', 'Ivanova', 'f')
-Mentor('Ivan', 'Kopylov')
-Lecturer('phyton', 8)
-Student.rate('Ivan Kopylov', 'phyton', 6)
-Reviewer.rate_hw('Anna Ivanova', 'phyton', 7)
+
 
 #best_student = Student('Ruoy', 'Eman', 'your_gender')
 #best_student.courses_in_progress += ['Python']
